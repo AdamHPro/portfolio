@@ -46,13 +46,6 @@ export function Experience({ experiences, className, reducedMotion }) {
                     ))}
                   </div>
                 </div>
-
-                {isFeaturedMission ? (
-                  <div className="mt-4 ml-3 rounded-md border border-line bg-surface/70 p-4 sm:ml-6">
-                    <p className="text-sm font-medium uppercase tracking-[0.16em] text-ink-muted">Embedded mission</p>
-                    <p className="mt-2 text-sm leading-7 text-ink-muted">This mission is presented within the Illuin / Paris Digital Lab experience, as described in the source profile.</p>
-                  </div>
-                ) : null}
               </div>
             );
           })}

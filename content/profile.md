@@ -105,6 +105,6 @@ Master's student at CentraleSupélec, specializing in Machine Learning & Data En
 
 ## Languages
 - French — Native
-- English — Fluent (C1)
+- English — C1
 - Arabic — C1
 - German — School level

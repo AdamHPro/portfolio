@@ -11,10 +11,10 @@ export const profile = {
   },
   about: {
     summary:
-      'Software Engineer at Cartier Horlogerie since April 2026, building backend APIs and AI-powered tooling in Python and TypeScript, deployed on Docker and GCP in production. Currently exploring Software Engineer / Data Engineer roles to keep solving real-world Data/AI problems at scale.',
+      'A technical profile grounded in production systems, paired with an ongoing commitment to mentoring and community engagement.',
     languages: [
       { name: 'French', level: 'Native' },
-      { name: 'English', level: 'Fluent (C1)' },
+      { name: 'English', level: 'C1' },
       { name: 'Arabic', level: 'C1' },
       { name: 'German', level: 'School level' }
     ]
@@ -70,20 +70,15 @@ export const profile = {
   ],
   projects: [
     {
-      title: 'Agentic Invoice Extraction Platform',
-      summary: 'A production-grade platform for supplier invoice ingestion, combining an admin experience with an AI extraction pipeline to structure data for ERP workflows.',
-      stack: ['Python', 'Django', 'FastAPI', 'TypeScript', 'GCP']
+      title: 'Singapore Transit Analytics Dashboard',
+      summary: 'A transit intelligence dashboard built around orchestration and real-time analytics to surface patterns across a national bus network.',
+      stack: ['Apache Airflow', 'Redis', 'Python', 'Dash', 'Plotly']
     },
     {
       title: 'Agentic RAG Event-Matching Agent',
       summary: 'An autonomous assistant that parses event data from emails and documents, then matches them to collaborators via multi-step reasoning and retrieval.',
       stack: ['Python', 'LangGraph', 'Mistral AI', 'PostgreSQL', 'Docker']
     },
-    {
-      title: 'Singapore Transit Analytics Dashboard',
-      summary: 'A transit intelligence dashboard built around orchestration and real-time analytics to surface patterns across a national bus network.',
-      stack: ['Apache Airflow', 'Redis', 'Python', 'Dash', 'Plotly']
-    }
   ],
   skills: [
     {
@@ -108,15 +103,22 @@ export const profile = {
       school: 'CentraleSupélec',
       location: 'Paris, France',
       program: 'Master of Engineering — Machine Learning & Data Engineering specialization',
-      period: 'September 2023 – Present',
-      coursework: ['Deep Learning', 'Statistics & Learning', 'Advanced Probabilities', 'Information Retrieval'],
-      exchange: 'National University of Singapore (NUS) — Data Engineering focus'
+      period: 'September 2023 – April 2027',
+      coursework: ['Algorithms and Complexity', 'Statistics & Learning', 'Advanced Probabilities', 'Information Retrieval'],
+    },
+    {
+      school: 'National University of Singapore',
+      location: 'Singapore',
+      program: 'Exchange Program — Data Engineering focus',
+      period: 'January 2025 – May 2025',
+      coursework: ['Deep Engineering', 'Feature Engineering', 'Machine Learning'],
     },
     {
       school: 'Lycée Saint-Louis',
       location: 'Paris, France',
-      program: 'Preparatory Classes for Engineering Schools — Mathematics, Computer Science, Physics',
-      period: 'September 2021 – July 2023'
+      program: 'Preparatory Classes for Engineering Schools',
+      period: 'September 2021 – July 2023',
+      coursework: ['Mathematics', 'Computer Science', 'Physics'],
     }
   ],
   certifications: [
@@ -151,7 +153,7 @@ export const profile = {
   ],
   languages: [
     { name: 'French', level: 'Native' },
-    { name: 'English', level: 'Fluent (C1)' },
+    { name: 'English', level: 'C1' },
     { name: 'Arabic', level: 'C1' },
     { name: 'German', level: 'School level' }
   ]

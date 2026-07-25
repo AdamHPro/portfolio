@@ -5,7 +5,7 @@ export function About({ about, leadership, className, reducedMotion }) {
         <div className="section-heading">
           <div>
             <p className="eyebrow">About</p>
-            <h2 className="mt-2 font-display text-2xl text-ink sm:text-[2rem]">A technical profile grounded in production systems.</h2>
+            <h2 className="mt-2 font-display text-2xl text-ink sm:text-[2rem]">About Adam</h2>
           </div>
         </div>
 

@@ -55,7 +55,7 @@ export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMot
           </div>
 
           <div className="flex flex-wrap items-center gap-3 rounded-full border border-line/70 bg-surface/70 px-4 py-3">
-            <span className="eyebrow">Trusted by</span>
+            <span className="eyebrow">Experiences</span>
             {partnerLogos.map((logo) => (
               <div
                 key={logo.alt}
