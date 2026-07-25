@@ -126,12 +126,14 @@ export const profile = {
       name: 'Data Engineering Professional Certificate',
       issuer: 'Snowflake',
       issued: 'May 2026',
+      logo: '/portfolio/logos/snowflake.svg',
       skills: ['Snowflake', 'Data Pipelines']
     },
     {
       name: 'Training on Disability and Compensation',
       issuer: 'Sopra Steria',
-      issued: 'October 2023'
+      issued: 'October 2023',
+      logo: '/portfolio/logos/soprasteria.svg'
     }
   ],
   leadership: [

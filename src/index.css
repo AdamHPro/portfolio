@@ -48,11 +48,11 @@ body {
   }
 
   .section-shell {
-    @apply scroll-mt-24 py-14 md:py-24;
+    @apply scroll-mt-20 py-10 md:py-16;
   }
 
   .section-heading {
-    @apply mb-10 flex items-end justify-between gap-4 border-b border-line pb-4;
+    @apply mb-8 flex items-end justify-between gap-4 border-b border-line pb-4;
   }
 
   .eyebrow {
