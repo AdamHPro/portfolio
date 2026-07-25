@@ -10,7 +10,7 @@ const partnerLogos = [
 export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMotion }) {
   return (
     <section id="hero" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
-      <div className="container-shell grid items-center gap-12 py-20 md:grid-cols-[1.15fr_0.85fr] md:py-28">
+      <div className="container-shell grid items-center gap-12 py-10 md:grid-cols-[1.15fr_0.85fr] md:py-16">
         <div className="max-w-2xl space-y-8">
           <p className="eyebrow">Portfolio · Software engineer</p>
           <h1 className="font-display text-[clamp(2.75rem,5vw,4.5rem)] font-medium leading-[0.92] tracking-[-0.02em] text-ink">
@@ -57,7 +57,17 @@ export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMot
           <div className="flex flex-wrap items-center gap-3 rounded-full border border-line/70 bg-surface/70 px-4 py-3">
             <span className="eyebrow">Trusted by</span>
             {partnerLogos.map((logo) => (
-              <img key={logo.alt} src={logo.src} alt={logo.alt} className="h-6 w-auto opacity-80 grayscale" loading="lazy" />
+              <div
+                key={logo.alt}
+                className="flex h-8 items-center justify-center rounded-md border border-line/70 bg-white/90 px-3 py-2 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md dark:bg-surface/90"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-5 w-auto max-w-[6.5rem] object-contain opacity-90 transition duration-200 hover:opacity-100"
+                  loading="lazy"
+                />
+              </div>
             ))}
           </div>
 
@@ -78,12 +88,6 @@ export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMot
         <div className="card-surface relative overflow-hidden p-4 sm:p-6">
           <div className="absolute inset-0 border border-accent/20" />
           <div className="relative space-y-5">
-            <img
-              src="/portfolio/adam-portrait.svg"
-              alt="Portrait illustration of Adam Hachicha"
-              className="w-full rounded-md border border-line object-cover"
-              loading="eager"
-            />
             <div className="space-y-4">
               <div className="flex items-end justify-between border-b border-line pb-4">
                 <div>
