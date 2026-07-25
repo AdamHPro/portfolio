@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #12161c;
+  --surface: #1a2029;
+  --ink: #e9e6dd;
+  --ink-muted: #8791a0;
+  --accent: #c6a15b;
+  --accent-2: #6e93ac;
+  --line: #262d38;
+}
+
+:root[data-theme='light'] {
+  --bg: #eef1f3;
+  --surface: #ffffff;
+  --ink: #1b2129;
+  --ink-muted: #5b6675;
+  --accent: #a6813f;
+  --accent-2: #3f6e8c;
+  --line: #d7dce1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-bg text-ink font-sans antialiased;
+  background-image: linear-gradient(135deg, rgba(110, 147, 172, 0.07) 0%, transparent 32%, transparent 100%);
+  background-attachment: fixed;
+}
+
+::selection {
+  @apply bg-accent-2 text-bg;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-[1100px] px-6 sm:px-8 lg:px-16;
+  }
+
+  .section-shell {
+    @apply scroll-mt-24 py-14 md:py-24;
+  }
+
+  .section-heading {
+    @apply mb-10 flex items-end justify-between gap-4 border-b border-line pb-4;
+  }
+
+  .eyebrow {
+    @apply text-[0.75rem] font-medium uppercase tracking-[0.15em] text-ink-muted font-mono;
+  }
+
+  .card-surface {
+    @apply rounded-md border border-line bg-surface shadow-card;
+  }
+
+  .chip {
+    @apply inline-flex items-center whitespace-nowrap rounded-full border border-line px-3 py-1 text-[0.75rem] font-medium uppercase tracking-[0.12em] text-ink-muted font-mono;
+  }
+
+  .link-underline {
+    @apply relative transition-colors duration-150 after:absolute after:left-0 after:top-full after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-200 hover:text-accent hover:after:scale-x-100;
+  }
+
+  .section-observer {
+    @apply opacity-0 translate-y-3 transition-all duration-500 ease-out;
+  }
+
+  .section-observer.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-observer {
+      @apply transition-none;
+    }
+  }
+}
