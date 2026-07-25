@@ -1,3 +1,5 @@
+import { TagPill } from './TagPill';
+
 export function Experience({ experiences, className, reducedMotion }) {
   return (
     <section id="experience" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
@@ -40,7 +42,7 @@ export function Experience({ experiences, className, reducedMotion }) {
 
                   <div className="mt-6 flex flex-wrap gap-2">
                     {experience.stack.map((item) => (
-                      <span key={item} className="chip">{item}</span>
+                      <TagPill key={item} label={item} />
                     ))}
                   </div>
                 </div>

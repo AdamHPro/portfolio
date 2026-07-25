@@ -1,5 +1,12 @@
 import { ArrowUpRight, Github, Linkedin, FileText, Copy, Check } from 'lucide-react';
 
+const partnerLogos = [
+  { src: '/portfolio/logos/cartier.svg', alt: 'Cartier' },
+  { src: '/portfolio/logos/illuin.svg', alt: 'Illuin Technology' },
+  { src: '/portfolio/logos/centralesupelec.svg', alt: 'CentraleSupélec' },
+  { src: '/portfolio/logos/nus.svg', alt: 'National University of Singapore' }
+];
+
 export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMotion }) {
   return (
     <section id="hero" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
@@ -47,6 +54,13 @@ export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMot
             </a>
           </div>
 
+          <div className="flex flex-wrap items-center gap-3 rounded-full border border-line/70 bg-surface/70 px-4 py-3">
+            <span className="eyebrow">Trusted by</span>
+            {partnerLogos.map((logo) => (
+              <img key={logo.alt} src={logo.src} alt={logo.alt} className="h-6 w-auto opacity-80 grayscale" loading="lazy" />
+            ))}
+          </div>
+
           <div className="flex flex-wrap items-center gap-3 border-t border-line pt-6 text-sm text-ink-muted">
             <span>{identity.location}</span>
             <span className="hidden h-1 w-1 rounded-full bg-accent-2 sm:block" />
@@ -61,13 +75,15 @@ export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMot
           </div>
         </div>
 
-        <div className="card-surface relative overflow-hidden p-6 sm:p-8">
+        <div className="card-surface relative overflow-hidden p-4 sm:p-6">
           <div className="absolute inset-0 border border-accent/20" />
-          <div className="relative space-y-6">
-            <div className="flex items-center justify-between">
-              <p className="eyebrow">Signal</p>
-              <span className="chip">Production</span>
-            </div>
+          <div className="relative space-y-5">
+            <img
+              src="/portfolio/adam-portrait.svg"
+              alt="Portrait illustration of Adam Hachicha"
+              className="w-full rounded-md border border-line object-cover"
+              loading="eager"
+            />
             <div className="space-y-4">
               <div className="flex items-end justify-between border-b border-line pb-4">
                 <div>

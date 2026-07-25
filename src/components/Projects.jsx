@@ -1,3 +1,5 @@
+import { TagPill } from './TagPill';
+
 export function Projects({ projects, className, reducedMotion }) {
   return (
     <section id="projects" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
@@ -19,7 +21,7 @@ export function Projects({ projects, className, reducedMotion }) {
                 <p className="text-sm leading-7 text-ink-muted">{project.summary}</p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.stack.map((item) => (
-                    <span key={item} className="chip">{item}</span>
+                    <TagPill key={item} label={item} />
                   ))}
                 </div>
               </div>

@@ -1,3 +1,5 @@
+import { TagPill } from './TagPill';
+
 export function Skills({ skills, className, reducedMotion }) {
   return (
     <section id="skills" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
@@ -15,7 +17,7 @@ export function Skills({ skills, className, reducedMotion }) {
               <p className="eyebrow">{group.category}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.items.map((item) => (
-                  <span key={item} className="chip">{item}</span>
+                  <TagPill key={item} label={item} />
                 ))}
               </div>
             </div>
