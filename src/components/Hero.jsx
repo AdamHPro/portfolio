@@ -10,7 +10,7 @@ const partnerLogos = [
 export function Hero({ identity, onCopyEmail, emailCopied, className, reducedMotion }) {
   return (
     <section id="hero" data-section className={`${className} ${reducedMotion ? 'is-visible' : ''}`}>
-      <div className="container-shell grid items-center gap-12 py-10 md:grid-cols-[1.15fr_0.85fr] md:py-16">
+      <div className="container-shell grid items-center gap-12 pt-10 pb-16 md:grid-cols-[1.15fr_0.85fr] md:pt-12 md:pb-20">
         <div className="max-w-2xl space-y-8">
           <p className="eyebrow">Portfolio · Software engineer</p>
           <h1 className="font-display text-[clamp(2.75rem,5vw,4.5rem)] font-medium leading-[0.92] tracking-[-0.02em] text-ink">
