@@ -22,9 +22,13 @@ export function Nav({ sections, activeSection, mobileNavOpen, onToggleMobile, on
                   isActive ? 'text-accent' : 'hover:text-ink'
                 }`}
               >
-                <span className="relative inline-flex items-center">
+                <span className="relative inline-flex flex-col">
                   {section.label}
-                  <span className={`ml-2 h-px w-6 bg-accent transition-transform duration-200 ${isActive ? 'scale-x-100' : 'scale-x-0'}`} />
+                  <span
+                    className={`mt-1 h-px w-full origin-left bg-accent transition-transform duration-200 ${
+                      isActive ? 'scale-x-100' : 'scale-x-0'
+                    }`}
+                  />
                 </span>
               </a>
             );
