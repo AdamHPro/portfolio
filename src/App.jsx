@@ -46,17 +46,36 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
+    const visibleSections = new Map();
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const id = entry.target.id;
           if (entry.isIntersecting) {
-            const id = entry.target.id;
-            setActiveSection(id);
+            visibleSections.set(id, {
+              top: entry.boundingClientRect.top,
+              ratio: entry.intersectionRatio
+            });
             entry.target.classList.add('is-visible');
+          } else {
+            visibleSections.delete(id);
           }
         });
+
+        if (visibleSections.size > 0) {
+          const nextActiveSection = Array.from(visibleSections.entries())
+            .sort(([, a], [, b]) => {
+              const aDistance = Math.abs(a.top - 120);
+              const bDistance = Math.abs(b.top - 120);
+              if (aDistance === bDistance) {
+                return b.ratio - a.ratio;
+              }
+              return aDistance - bDistance;
+            })[0][0];
+          setActiveSection(nextActiveSection);
+        }
       },
-      { threshold: 0.16 }
+      { threshold: [0, 0.16, 0.35, 0.6] }
     );
 
     const nodes = Array.from(document.querySelectorAll('[data-section]'));
