@@ -6,7 +6,14 @@ export function Nav({ sections, activeSection, mobileNavOpen, onToggleMobile, on
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-bg/80 backdrop-blur-xl">
       <div className="container-shell flex items-center justify-between py-4">
-        <a href="#hero" className="text-sm font-semibold uppercase tracking-[0.24em] text-ink" onClick={() => onSelectSection()}>
+        <a
+          href="#hero"
+          className="text-sm font-semibold uppercase tracking-[0.24em] text-ink"
+          onClick={(event) => {
+            event.preventDefault();
+            onSelectSection('hero');
+          }}
+        >
           Adam Hachicha
         </a>
 
@@ -17,7 +24,10 @@ export function Nav({ sections, activeSection, mobileNavOpen, onToggleMobile, on
               <a
                 key={section.id}
                 href={`#${section.id}`}
-                onClick={() => onSelectSection()}
+                onClick={(event) => {
+                  event.preventDefault();
+                  onSelectSection(section.id);
+                }}
                 className={`nav-link text-[0.8125rem] font-medium uppercase tracking-[0.1em] text-ink-muted transition-colors duration-150 ${
                   isActive ? 'text-accent' : 'hover:text-ink'
                 }`}
@@ -66,7 +76,10 @@ export function Nav({ sections, activeSection, mobileNavOpen, onToggleMobile, on
                 <a
                   key={section.id}
                   href={`#${section.id}`}
-                  onClick={() => onSelectSection()}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    onSelectSection(section.id);
+                  }}
                   className={`text-[0.8125rem] font-medium uppercase tracking-[0.1em] ${
                     isActive ? 'text-accent' : 'text-ink-muted'
                   }`}

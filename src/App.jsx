@@ -99,6 +99,28 @@ function App() {
     }
   };
 
+  const handleSelectSection = (sectionId) => {
+    setMobileNavOpen(false);
+    if (!sectionId) return;
+    if (sectionId === 'hero') {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+      return;
+    }
+
+    const sectionNode = document.getElementById(sectionId);
+    if (!sectionNode) return;
+
+    const headerHeight = document.querySelector('header')?.getBoundingClientRect().height ?? 0;
+    const headingNode = sectionNode.querySelector('.section-heading');
+    const targetNode = headingNode || sectionNode;
+    const top = targetNode.getBoundingClientRect().top + window.scrollY - headerHeight - 12;
+
+    window.scrollTo({
+      top: Math.max(top, 0),
+      behavior: reducedMotion ? 'auto' : 'smooth'
+    });
+  };
+
   const sectionClassName = useMemo(
     () => (reducedMotion ? 'section-observer is-visible' : 'section-observer'),
     [reducedMotion]
@@ -111,7 +133,7 @@ function App() {
         activeSection={activeSection}
         mobileNavOpen={mobileNavOpen}
         onToggleMobile={() => setMobileNavOpen((value) => !value)}
-        onSelectSection={() => setMobileNavOpen(false)}
+        onSelectSection={handleSelectSection}
         theme={theme}
         onToggleTheme={() => setTheme((value) => (value === 'dark' ? 'light' : 'dark'))}
       />
