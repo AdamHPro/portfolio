@@ -9,7 +9,7 @@
 
 - **Name:** Adam Hachicha
 - **Current title:** Software Engineer at Cartier Horlogerie
-- **Tagline (hero subtitle):** Software Engineer building backend APIs and AI-powered tooling in Python and TypeScript, deployed on Docker and GCP in production.
+- **Tagline (hero subtitle):** Full-stack Software Engineer building APIs, admin tools, and AI-powered tooling in Python and TypeScript, containerized with Docker and deployed on GCP in production.
 - **Location:** La Chaux-de-Fonds, Switzerland
 - **Email:** adam.hachicha@student-cs.fr
 - **Phone:** 06 21 56 39 92 — ⚠️ **do not display publicly on the site**, see `docs/site-structure.md`

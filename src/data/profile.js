@@ -2,8 +2,7 @@ export const profile = {
   identity: {
     name: 'Adam Hachicha',
     title: 'Software Engineer at Cartier Horlogerie',
-    tagline:
-      'Software Engineer building backend APIs and AI-powered tooling in Python and TypeScript, deployed on Docker and GCP in production.',
+    tagline: 'Full-stack Software Engineer building APIs, admin tools, and AI-powered tooling in Python and TypeScript, containerized with Docker and deployed on GCP in production.',
     location: 'La Chaux-de-Fonds, Switzerland',
     email: 'adam.hachicha@student-cs.fr',
     linkedin: 'https://www.linkedin.com/in/adam-hachicha/',
